@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Home</title><link rel="canonical" href="/index.html"><meta name="description" content="..."><link rel="stylesheet" href="styles.css"><meta property="og:title" content="Home"><meta property="og:description" content="…"><meta property="og:type" content="website"><meta property="og:url" content="/index.html"><meta property="og:site_name" content="Convex Optimization
+演習問題"><meta name="twitter:title" content="Home"><meta name="twitter:domain" content><meta name="twitter:description" content="..."><link href="/pagefind/pagefind-component-ui.css" rel="stylesheet"><script src="/pagefind/pagefind-component-ui.js" type="module"></script><style>/* Alignment */
+mtable.right-align mtd,
+mtable mtd.right-align,
+mtable.left-align mtd.right-align,
+mtable.aligned mtd:nth-child(odd) {
+  justify-items: end;
+  text-align: right;
+}
+mtable.cases mtd,
+mtable.left-align mtd,
+mtable mtd.left-align,
+mtable.aligned mtd:nth-child(even),
+math:is(:not([display])) > mtable.multiline-equation mtd {
+  justify-items: start;
+  text-align: left;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.left-flush {
+  padding-left: 0;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.right-flush {
+  padding-right: 0;
+}
+
+/* Tables */
+mtable {
+  math-style: inherit;
+}
+mtd {
+  math-depth: auto-add;
+  math-style: compact;
+  math-shift: compact;
+}
+
+/* Equations */
+mtable.multiline-equation mtd {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+  padding: 0;
+}
+math > mtable.multiline-equation mtr:not(:last-child) mtd {
+  padding-bottom: 0.5em;
+}
+
+/* Fractions */
+mfrac {
+  padding-inline: 0;
+  margin-inline: 0.1em;
+}
+
+/* Accents */
+mover[accent="true" i] > :first-child {
+  font-feature-settings: "dtls";
+}
+mover.dotted[accent="true" i] > :first-child {
+  font-feature-settings: "dtls" 0;
+}
+
+/* Other rules for scriptlevel, displaystyle and math-shift */
+munder > :nth-child(2),
+munderover > :nth-child(2) {
+  math-shift: compact
+}
+munder[accentunder="true" i] > :not(:first-child),
+mover[accent="true" i] > :not(:first-child) {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+}</style></head><body class="dark:bg-zinc-900"><pagefind-config bundle-path="/pagefind/" base-url="/"></pagefind-config><div class="group"><div class="relative"><input class="z-10 fixed md:hidden peer appearance-none left-0 top-1/2 w-8 h-20 -translate-y-1/2 checked:translate-y-0 checked:translate-x-72 checked:top-0 checked:w-full checked:h-full" type="checkbox"><div class="flex items-center justify-center z-5 fixed top-1/2 w-8 h-20 border-r border-t border-b border-neutral-300 bg-neutral-100 text-neutral-400 dark:border-transparent dark:bg-zinc-700 rounded-r-sm shadow-sm md:hidden -translate-y-1/2 peer-checked:translate-x-72 transition-transform text-3xl">|||</div></div><nav id="main-toc" class="dark:text-white w-72 z-10 flex fixed left-0 top-0 h-full -translate-x-full shadow-sm md:shadow-none group-has-[:checked]:translate-x-0 md:translate-x-0 flex-col border-r border-neutral-300 dark:border-transparent bg-neutral-100 dark:bg-zinc-800 transition-transform"><a href="/" class="block p-4 text-xl font-bold text-center dark:text-white no-underline">Convex Optimization<br>演習問題</a><pagefind-modal-trigger class="flex shrink-0 bg-white dark:bg-black h-9"><noscript class="m-auto text-sm text-black dark:text-white">Enable JS for search support</noscript></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="border-neutral-300 dark:border-transparent overflow-x-auto [&amp;_a[autofocus]]:block [&amp;_a[autofocus]]:border-y [&amp;_a[autofocus]]:px-2 [&amp;_a[autofocus]]:py-1 [&amp;_a[autofocus]]:border-neutral-300 [&amp;_a[autofocus]]:bg-white [&amp;_a[autofocus]]:dark:border-transparent [&amp;_a[autofocus]]:dark:bg-zinc-700 [&amp;_a.toc-entry-other-page]:block [&amp;_a.toc-entry-other-page]:border-y [&amp;_a.toc-entry-other-page]:px-2 [&amp;_a.toc-entry-other-page]:py-1 [&amp;_a.toc-entry-other-page]:border-transparent [&amp;_a.toc-entry-other-page]:hover:bg-neutral-200 [&amp;_a.toc-entry-other-page]:dark:hover:bg-zinc-700"><div><a href="#" autofocus aria-current="page" id="toc-current-page">Home</a><a href="#haita-main-content" class="absolute left-4 top-0 -translate-y-full focus:translate-y-4 focus-visible:translate-y-4 z-50 bg-white dark:bg-zinc-700 px-4 py-2 text-black dark:text-white">Skip to main content</a></div><div><h2 class="font-bold p-2">Part I Theory</h2></div><div><a href="chapter02.html" class="toc-entry-other-page">Chapter 2: Convex sets</a></div><div><a href="chapter03.html" class="toc-entry-other-page">Chapter 3: Convex functions</a></div><div><h2 class="font-bold p-2">Part II Applications</h2></div><div><h2 class="font-bold p-2">Part III Algorithms</h2></div></div></nav></div><div class="grid xl:grid-cols-[1fr_14rem] md:ml-72 max-w-[64rem]"><a href="#toc-current-page" class="absolute left-4 top-0 -translate-y-full focus:translate-y-4 focus-visible:translate-y-4 z-50 bg-white dark:bg-zinc-700 px-4 py-2 text-black dark:text-white">Skip to current page in TOC</a><article id="haita-main-content" class="p-3 sm:p-6 md:p-8 min-w-full prose prose-neutral dark:prose-invert leading-normal prose-pre:bg-neutral-100 prose-pre:text-neutral-900 prose-pre:border prose-pre:border-neutral-300 dark:prose-pre:!bg-black dark:prose-pre:!text-neutral-100 dark:prose-pre:!border-transparent prose-pre:rounded-none prose-a:decoration-1 prose-a:underline-offset-4 prose-a:hover:decoration-3" data-pagefind-body><h1>Home</h1><p>このページは <a href="https://web.stanford.edu/~boyd/cvxbook/">Stephen Boyd and Lieven Vandenberghe. Convex Optimization</a> の演習問題を解いた結果を置いておく場所です.</p><footer class="mt-8 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4"><div class="md:col-start-2 text-right [&amp;>a]:no-underline border-1 border-neutral-300 dark:border-transparent dark:bg-zinc-800 hover:bg-neutral-500/30 hover:shadow-xs [&amp;>a]:block [&amp;>a]:w-full [&amp;>a]:h-full [&amp;>a]:p-4 "><a href="chapter02.html">Chapter 2: Convex sets</a></div><span class="md:col-span-2 text-xs text-center">Powered by <a href="https://github.com/wensimehrp/haita">Haita</a>. Made in Vancouver with love.</span></footer></article><nav class="hidden xl:block right-0 top-0 h-fit sticky pt-5 dark:text-white leading-tight"><h2 class="font-bold">On this page</h2><ul class="border-l border-neutral-300 dark:border-zinc-600 pl-3 [&amp;>li]:my-3 [&amp;>li>a]:block [&amp;>li>a]:hover:underline [&amp;>li>a]:decoration-2 [&amp;>li>a]:underline-offset-4"><em>This page does not contain any headings.</em></ul></nav></div></body></html>
