@@ -11,11 +11,12 @@
 #book(
   debug: true,
   title: site-name,
-  // canonical-url: "https://wensimehrp.github.io",
+  canonical-url: "https://espeon011.github.io",
+  root: "boyd-exercises",
   html-renderer: new-hamber.html-renderer.with(
     pagefind-enabled: true,
     sidebar-image: html.a(
-      href: "/",
+      href: "/boyd-exercises",
       class: "block p-4 text-xl font-bold text-center dark:text-white no-underline",
       site-name,
     ),
@@ -27,20 +28,5 @@
     chapter("chapter03", content: include "pages/chapter03.typ"),
     [= Part II Applications],
     [= Part III Algorithms],
-    // chapter("index", content: include "docs/intro.typ"),
-    // [= User Guide],
-    // offset-chapter("installation"),
-    // offset-chapter("tutorial", children: (
-    //   offset-chapter("tutorial/authoring"),
-    //   offset-chapter("tutorial/using-typst-packages"),
-    //   offset-chapter("tutorial/integration"),
-    //   offset-chapter("tutorial/custom-renderer"),
-    //   offset-chapter("tutorial/continuous-integration"),
-    // )),
-    // divider(),
-    // offset-chapter("references"),
-    // offset-chapter("demo", children: (
-    //   offset-chapter("demo-code"),
-    // )),
   ),
 )
