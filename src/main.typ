@@ -1,4 +1,4 @@
-#import "@local/haita:0.2.1": *
+#import "@preview/haita:0.3.0": *
 
 #let site-name = "Convex Optimization\n演習問題"
 
