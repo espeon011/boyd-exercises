@@ -1,16 +1,8 @@
 #import "@preview/haita:0.3.0": *
 
-#let site-name = "Convex Optimization\n演習問題"
-
-#let offset-chapter(path, ..args) = chapter(
-  path,
-  content: include path + ".typ",
-  ..args,
-)
-
 #book(
   debug: false,
-  title: site-name,
+  title: "Convex Optimization 演習問題",
   language: "ja",
   canonical-url: "https://espeon011.github.io",
   root: "boyd-exercises",
@@ -19,15 +11,19 @@
     sidebar-image: html.a(
       href: "/boyd-exercises",
       class: "block p-4 text-xl font-bold text-center dark:text-white no-underline",
-      site-name,
+      "Convex Optimization\n演習問題",
     ),
   ),
   tree: (
     chapter("index", content: include "pages/home.typ"),
+    std.divider(),
     [= Part I Theory],
     chapter("chapter02", content: include "pages/chapter02.typ"),
     chapter("chapter03", content: include "pages/chapter03.typ"),
+    std.divider(),
     [= Part II Applications],
+    std.divider(),
     [= Part III Algorithms],
+    std.divider(),
   ),
 )
