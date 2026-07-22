@@ -11,6 +11,7 @@
 #book(
   debug: false,
   title: site-name,
+  language: "ja",
   canonical-url: "https://espeon011.github.io",
   root: "boyd-exercises",
   html-renderer: new-hamber.html-renderer.with(
