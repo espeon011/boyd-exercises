@@ -33,7 +33,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/haita
+          path: ./docs/boyd-exercises
   # Job 2: deploy the docs
   deploy:
     needs: build-docs

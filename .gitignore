@@ -13,4 +13,4 @@ result-*
 **/.nixos-test-history
 
 # haita docs build result
-./docs
+/docs/
