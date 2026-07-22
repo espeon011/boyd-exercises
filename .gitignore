@@ -11,3 +11,6 @@ result-*
 
 # Ignore NixOS interactive test driver history
 **/.nixos-test-history
+
+# haita docs build result
+./docs
