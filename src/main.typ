@@ -9,7 +9,7 @@
 )
 
 #book(
-  debug: true,
+  debug: false,
   title: site-name,
   canonical-url: "https://espeon011.github.io",
   root: "boyd-exercises",
