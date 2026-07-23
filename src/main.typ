@@ -3,7 +3,7 @@
 #book(
   debug: false,
   title: "Convex Optimization 演習問題",
-  language: "ja",
+  lang: "ja",
   canonical-url: "https://espeon011.github.io",
   root: "boyd-exercises",
   html-renderer: new-hamber.html-renderer.with(
