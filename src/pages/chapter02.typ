@@ -41,7 +41,7 @@
 
 #exercise(full-title: [Exercise 2.1])[
   Let $C subset RR^n$ be a convex set, with $x_1, dots, x_k in C$, and $theta_1, dots, theta_k in RR$ satisfy $theta_i >= 0$, $theta_1 + dots + theta_k = 1$.
-  Show that $theta_1 x_1 + dots + theta_k x_k in C$. (The definition of cenvexity is that this holds for $k = 2$; you must show it for arbitrary $k$. ) _Hint_. Use induction on $k$.
+  Show that $theta_1 x_1 + dots + theta_k x_k in C$. (The definition of convexity is that this holds for $k = 2$; you must show it for arbitrary $k$. ) _Hint_. Use induction on $k$.
 ]
 
 *_Proof_*:
