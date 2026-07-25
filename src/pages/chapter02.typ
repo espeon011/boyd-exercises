@@ -91,11 +91,13 @@ $x_1, x_2$ を $C$ 内の任意の異なる 2 点とし, $x_1, x_2$ を通る直
 *_Proof_*: $C subset RR^n$ を midpoint convex set とし, 閉集合であるとする.
 $x_1, x_2$ を $C$ 内の任意の異なる 2 点とする.
 このとき任意の実数 $theta in [0, 1]$ に対して $theta x_1 + (1 - theta) x_2 in C$ を示せばよい. \
-$f: [0, 1] -> R^n$ を $f(t) = t x_1 + (1 - t) x_2$ と定義する.
+$f: [0, 1] -> R^n$ を $f(t) = (1 - t) x_1 + t x_2$ と定義する.
 $theta_"l"^((0)) = 0$, $theta_"r"^((0)) = 1$ とおくと $f(theta_"l"^((0))) = x_1 in C$, $f(theta_"r"^((0))) = x_2 in C$ である.
-$C$ は midpoint convex であるから $f(frac((theta_"l"^((0)) + theta_"r"^((0))), 2, style: "horizontal")) in C$ である.
-// $theta <= frac((theta_"l"^((0)) + theta_"r"^((0))), 2, style: "horizontal")$ のとき $theta_"l"^((1)) = theta_"l"^((0))$, $theta_"r"^((1)) = frac((theta_"l"^((0)) + theta_"r"^((0))), 2, style: "horizontal")$ と定義し,
-// $theta >= frac((theta_"l"^((0)) + theta_"r"^((0))), 2, style: "horizontal")$ のとき $theta_"l"^((1)) = frac((theta_"l"^((0)) + theta_"r"^((0))), 2, style: "horizontal")$, $theta_"r"^((1)) = theta_"r"^((0))$ と定義する.
+$C$ は midpoint convex であるから $f$ の定義より
+$
+  f(frac((theta_"l"^((0)) + theta_"r"^((0))), 2, style: "horizontal")) = frac(( f(theta_"l"^((0))) + f(theta_"r"^((0))) ), 2, style: "horizontal") = frac(( x_1 + x_2 ), 2, style: "horizontal") in C
+$
+である.
 $theta_"l"^((1))$, $theta_"r"^((1))$ を次のように定める.
 $
   theta <= (theta_"l"^((0)) + theta_"r"^((0))) / 2 => cases(
@@ -108,7 +110,7 @@ $
   )
 $
 このとき $f(theta_"l"^((1))) in C$ かつ $f(theta_"r"^((1))) in C$ である.
-任意の $k in NN$ に対しても同様に $theta_"l"^((k)), theta_"r"^((k))$ から $theta_"l"^((k + 1)), theta_"r"^((k + 1))$ を定めると $f(theta_"l"^((k))) in C$ かつ $f(theta_"r"^((k))) in C$ であり, 次のようになる.
+任意の $k in NN$ に対しても同様に $theta_"l"^((k)), theta_"r"^((k))$ から $theta_"l"^((k + 1)), theta_"r"^((k + 1))$ を定めると任意の $k$ に対して $f(theta_"l"^((k))) in C$ かつ $f(theta_"r"^((k))) in C$ であり, 次のようになる.
 $
   theta_"l"^((0)) <= theta_"l"^((1)) <= dots <= theta_"l"^((k)) <= dots <= theta <= dots <= theta_"r"^((k)) <= dots <= theta_"r"^((1)) <= theta_"r"^((0))
 $
@@ -253,7 +255,7 @@ $
 *_Proof_*: (a), (b), (d) が多面体であり, (c) だけが多面体でない.
 #alpha-enum(
   [
-    $a_1$ と $a_2$ が線形独立の場合のみ示す.
+    $a_1$ と $a_2$ が線形独立の場合のみ示す. 他の場合は省略.
     このとき $B := (a_1, a_2) in RR^(n times 2)$ はランク 2 のため一般化逆行列 $B^+ = (B^T B)^(-1) B^T in RR^(2 times n)$ が定まり $B^+ B = I_2$ となる.
     S を表す等式制約として $x$ が $a_1$, $a_2$ が張る空間に属するということを直交射影を用いて表す.
     すなわち $B B^+ x = x$. これは $F = B B^+ - I$, $g = bold(0)$ と対応する.
@@ -266,10 +268,11 @@ $
     $A = -I_n$, $b = bold(0)$, $F = (bold(1)_n, alpha_1, alpha_2)^T$, $g = (1, b_1, b_2)^T$ とすればよい.
   ],
   [
-    この $S$ は単位球体 $B(0, 1)$ に等しい.
-    実際, $x in B(0, 1)$ とすると任意の単位球面上のベクトル $y$ に対して $x^T y <= 1$ なので $x in S$ であるし,
-    $x in.not B(0, 1)$ とすると $y = frac(x, norm(x), style: "horizontal")$ に対して $x^T y = norm(x) > 1$ となってしまい $x in.not S$ である.
-    単位球体は多面体ではない.
+    この $S$ は単位球体 $B(0, 1)$ の全ての成分が非負の部分に等しい.
+    これは $x in B(0, 1)$ と $x^T y <= 1, "for all" y "with" norm(y)_2 = 1$ が同値であることによる.
+    実際, $x in B(0, 1)$ とすると任意の単位球面上のベクトル $y$ に対して $x^T y <= norm(x)_2 dot norm(y)_2 <= 1$ であるし,
+    $x in.not B(0, 1)$ とすると $y = frac(x, norm(x), style: "horizontal")$ に対して $x^T y = norm(x) > 1$ となる.
+    従って $S = {x in B(0, 1) mid(|) x succ.eq 0}$ となる. この集合は多面体ではない (証明略).
   ],
   [
     $max_(norm(y)_1 = 1) x^T y = norm(x)_infinity$ である (ヘルダーの不等式の特別な場合).
