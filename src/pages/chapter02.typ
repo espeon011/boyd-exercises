@@ -39,7 +39,7 @@
 
 = Definition of convexity
 
-#exercise(full-title: [Excercise 2.1])[
+#exercise(full-title: [Exercise 2.1])[
   Let $C subset RR^n$ be a convex set, with $x_1, dots, x_k in C$, and $theta_1, dots, theta_k in RR$ satisfy $theta_i >= 0$, $theta_1 + dots + theta_k = 1$.
   Show that $theta_1 x_1 + dots + theta_k x_k in C$. (The definition of cenvexity is that this holds for $k = 2$; you must show it for arbitrary $k$. ) _Hint_. Use induction on $k$.
 ]
@@ -56,7 +56,7 @@ $
 が成り立ち, 凸集合の定義から $(1 - theta_(ell + 1)) y + theta_(ell + 1) x_(ell + 1) in C$ が成り立ち,
 従って $theta_1 x_1 + dots + theta_(ell + 1) x_(ell + 1) in C$ が成り立つ. $qed$
 
-#exercise(full-title: [Excercise 2.2])[
+#exercise(full-title: [Exercise 2.2])[
   Show that a set is convex if and only if its intersection with any line is convex.
   Show that a set is affine if and only if its intersection with any line is affine.
 ]
@@ -80,7 +80,7 @@ $x_1, x_2$ を $C$ 内の任意の異なる 2 点とし, $x_1, x_2$ を通る直
 仮定より $C inter L$ は affine であり, 従って $C inter L$ 内の異なる 2 点を通る直線は必ず $C inter L$ に含まれる.
 従って $L subset C$ であり $C$ 自身も affine である. $qed$
 
-#exercise(full-title: [Excercise 2.3 (Midpoint convexity)])[
+#exercise(full-title: [Exercise 2.3 (Midpoint convexity)])[
   A set $C$ is *_midpoint convex_* if whenever two points $a, b$ are in $C$,
   the average or midpoint $frac((a + b), 2, style: "horizontal")$ is in $C$.
   Obviously a convex set is midpoint convex.
@@ -117,7 +117,7 @@ $f$ が連続である事から $lim_(k -> infinity) f(theta_"l"^((k))) = f(thet
 $C$ が閉集合であることから $f(theta) in C$ である.
 従って $C$ は凸集合である. $qed$
 
-#exercise(full-title: [Excercise 2.4])[
+#exercise(full-title: [Exercise 2.4])[
   Show that the convex hull of a set $S$ is the intersection of all convex sets that contain $S$.
   (The same method can be used to show that the conic, or affine, or linear hull of a set $S$ is the intersection of all conic sets, or affine sets, or subspaces that contain $S$.)
 ]
@@ -131,7 +131,7 @@ $S$ を含む任意の凸集合 $C$ について $theta_1 x_1 + dots + theta_k x
 
 = Examples
 
-#exercise(full-title: [Excercise 2.5])[
+#exercise(full-title: [Exercise 2.5])[
   What is the distance between two parallel hyperplanes ${x in RR^n mid(|) a^T x = b_1}$ and ${x in RR^n mid(|) a^T x = b_2}$?
 ]
 
@@ -150,7 +150,7 @@ $
 $
 となる. $qed$
 
-#exercise(full-title: [Excercise 2.6])[
+#exercise(full-title: [Exercise 2.6])[
   _When does one halfspace contain another?_ Give conditions under which
   $
     {x mid(|) a^T x <= b} subset.eq {x mid(|) hat(a)^T x <= hat(b)}
@@ -184,7 +184,7 @@ $
 2 つの半空間が等しくなるのは $a$ と $hat(a)$ が互いに正の定数倍で移り合い,
 $frac(b, norm(a), style: "horizontal") = frac(hat(b), norm(hat(a)), style: "horizontal")$ のときである. $qed$
 
-#exercise(full-title: [Excercise 2.7 (Voronoi description of halfspace)])[
+#exercise(full-title: [Exercise 2.7 (Voronoi description of halfspace)])[
   Let $a$ and $b$ be distinct points in $RR^n$.
   Show that the set of all points that are closer (in Euclidean norm) to $a$ than $b$,
   i.e., ${x mid(|) norm(x - a)_2 <= norm(x - b)_2}$ is a half space.
@@ -238,7 +238,7 @@ $
   },
 )
 
-#exercise(full-title: [Excercise 2.8])[
+#exercise(full-title: [Exercise 2.8])[
   Which of the following sets $S$ are polyhedra?
   If possible, express $S$ in the form $S = { x mid(|) A x prec.eq b, F x = g}$.
 
