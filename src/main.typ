@@ -14,10 +14,10 @@
       "Convex Optimization\n演習問題",
     ),
     summary-image-renderer: new-hamber.summary-image-renderer.with(
-      "Convex Optimization\n演習問題",
+      "Convex Optimization Ex",
       "https://espeon011.github.io",
       bottom-content: [
-        Stephen Boyd and Lieven Vandenberghe. Convex Optimization の演習問題の解答置き場
+        Solutions for exercises from Stephen Boyd and Lieven Vandenberghe's Convex Optimization
       ],
     ),
   ),
