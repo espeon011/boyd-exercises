@@ -91,7 +91,7 @@ $x_1, x_2$ を $C$ 内の任意の異なる 2 点とし, $x_1, x_2$ を通る直
 *_Proof_*: $C subset RR^n$ を midpoint convex set とし, 閉集合であるとする.
 $x_1, x_2$ を $C$ 内の任意の異なる 2 点とする.
 このとき任意の実数 $theta in [0, 1]$ に対して $theta x_1 + (1 - theta) x_2 in C$ を示せばよい. \
-$f: [0, 1] -> R^n$ を $f(t) = (1 - t) x_1 + t x_2$ と定義する.
+$f: [0, 1] -> RR^n$ を $f(t) = (1 - t) x_1 + t x_2$ と定義する.
 $theta_"l"^((0)) = 0$, $theta_"r"^((0)) = 1$ とおくと $f(theta_"l"^((0))) = x_1 in C$, $f(theta_"r"^((0))) = x_2 in C$ である.
 $C$ は midpoint convex であるから $f$ の定義より
 $
