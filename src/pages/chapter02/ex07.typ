@@ -1,7 +1,7 @@
 #import "../../lib.typ": alpha-enum, ex
 #import "@preview/cetz:0.5.2"
 
-== Exercise 2.7 (Voronoi description of halfspace)
+== Exercise 2.7 (Voronoi description of halfspace) <ex-2-7>
 
 #ex[
   Let $a$ and $b$ be distinct points in $RR^n$.

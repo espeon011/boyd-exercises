@@ -18,11 +18,13 @@
           name = "compile";
           runtimeInputs = [
             pkgs.typst
+            pkgs.tinymist
             pkgs.pagefind
             pkgs.git
           ];
           text = ''
             cd "$(git rev-parse --show-toplevel)"
+            tinymist compile --save-lock --when never --format html src/main.typ ./docs/tinymist-probe.html
             typst compile --features bundle,html --format bundle src/main.typ ./docs
             pagefind --site ./docs --output-subdir boyd-exercises/pagefind
           '';

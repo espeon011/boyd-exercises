@@ -13,6 +13,7 @@
 #include "chapter02/ex06.typ"
 #include "chapter02/ex07.typ"
 #include "chapter02/ex08.typ"
+#include "chapter02/ex09.typ"
 
 WIP
 

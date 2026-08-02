@@ -12,5 +12,8 @@ result-*
 # Ignore NixOS interactive test driver history
 **/.nixos-test-history
 
+# tinymist lock file
+tinymist.lock
+
 # haita docs build result
 /docs/
