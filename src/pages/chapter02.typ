@@ -1,7 +1,3 @@
-#import "@preview/theorion:0.6.0": *
-#import cosmos.rainbow: *
-#show: show-theorion
-
 #import "@preview/cetz:0.5.2"
 
 #let conv = math.op("conv")
@@ -35,16 +31,46 @@
   }
 }
 
+#let quote-mark() = html.elem(
+  "span",
+  attrs: (
+    "aria-hidden": "true",
+    "data-pagefind-ignore": "",
+    style: "font-family: Georgia, 'Times New Roman', serif; font-size: 2.2em; line-height: 0; vertical-align: -0.45em; color: #f97316; margin-right: 0.08em;",
+  ),
+  "\u{201C}",
+)
+
+#let ex(body) = context if target() == "html" {
+  html.elem(
+    "blockquote",
+    attrs: (
+      cite: "https://web.stanford.edu/~boyd/cvxbook/",
+      style: "--en-prose-quote-borders: #f97316; font-style: normal; quotes: none;",
+    ),
+    html.elem("p", quote-mark() + body),
+  )
+} else {
+  block(
+    width: 100%,
+    inset: (left: 0.9em, top: 0.2em, bottom: 0.2em),
+    stroke: (left: 2pt + rgb("#f97316")),
+    text(fill: luma(45%))[#text(fill: rgb("#f97316"), size: 2.2em, weight: "bold")[“]#body],
+  )
+}
+
 #title[Chapter 2: Convex sets]
 
 = Definition of convexity
 
-#exercise(full-title: [Exercise 2.1])[
+== Exercise 2.1
+
+#ex[
   Let $C subset RR^n$ be a convex set, with $x_1, dots, x_k in C$, and $theta_1, dots, theta_k in RR$ satisfy $theta_i >= 0$, $theta_1 + dots + theta_k = 1$.
   Show that $theta_1 x_1 + dots + theta_k x_k in C$. (The definition of convexity is that this holds for $k = 2$; you must show it for arbitrary $k$. ) _Hint_. Use induction on $k$.
 ]
 
-*_Proof_*:
+*解答*:
 $k$ に関する帰納法で示す.
 $k = 2$ のとき定義から明らか.
 $k = ell$ のとき成り立つとして $k = ell + 1$ のとき成立することを示す.
@@ -56,12 +82,14 @@ $
 が成り立ち, 凸集合の定義から $(1 - theta_(ell + 1)) y + theta_(ell + 1) x_(ell + 1) in C$ が成り立ち,
 従って $theta_1 x_1 + dots + theta_(ell + 1) x_(ell + 1) in C$ が成り立つ. $qed$
 
-#exercise(full-title: [Exercise 2.2])[
+== Exercise 2.2
+
+#ex[
   Show that a set is convex if and only if its intersection with any line is convex.
   Show that a set is affine if and only if its intersection with any line is affine.
 ]
 
-*_Proof_*:
+*解答*:
 (convex, $arrow.r.double$) 凸集合同士の共通部分は凸であるため任意の直線との共通部分は凸. \
 (convex, $arrow.l.double$) $C$ を $RR^n$ の部分集合とし, 任意の直線との共通部分が凸であるとする.
 任意の $x_1, x_2 in C$ に対し, $x_1$ と $x_2$ を結ぶ直線を $L$ とすれば $L inter C$ は仮定より凸である.
@@ -80,7 +108,9 @@ $x_1, x_2$ を $C$ 内の任意の異なる 2 点とし, $x_1, x_2$ を通る直
 仮定より $C inter L$ は affine であり, 従って $C inter L$ 内の異なる 2 点を通る直線は必ず $C inter L$ に含まれる.
 従って $L subset C$ であり $C$ 自身も affine である. $qed$
 
-#exercise(full-title: [Exercise 2.3 (Midpoint convexity)])[
+== Exercise 2.3 (Midpoint convexity)
+
+#ex[
   A set $C$ is *_midpoint convex_* if whenever two points $a, b$ are in $C$,
   the average or midpoint $frac((a + b), 2, style: "horizontal")$ is in $C$.
   Obviously a convex set is midpoint convex.
@@ -88,7 +118,7 @@ $x_1, x_2$ を $C$ 内の任意の異なる 2 点とし, $x_1, x_2$ を通る直
   As a simple case prove that if $C$ is closed and midpoint convex, then $C$ is convex.
 ]
 
-*_Proof_*: $C subset RR^n$ を midpoint convex set とし, 閉集合であるとする.
+*解答*: $C subset RR^n$ を midpoint convex set とし, 閉集合であるとする.
 $x_1, x_2$ を $C$ 内の任意の異なる 2 点とする.
 このとき任意の実数 $theta in [0, 1]$ に対して $theta x_1 + (1 - theta) x_2 in C$ を示せばよい. \
 $f: [0, 1] -> RR^n$ を $f(t) = (1 - t) x_1 + t x_2$ と定義する.
@@ -119,12 +149,14 @@ $f$ が連続である事から $lim_(k -> infinity) f(theta_"l"^((k))) = f(thet
 $C$ が閉集合であることから $f(theta) in C$ である.
 従って $C$ は凸集合である. $qed$
 
-#exercise(full-title: [Exercise 2.4])[
+== Exercise 2.4
+
+#ex[
   Show that the convex hull of a set $S$ is the intersection of all convex sets that contain $S$.
   (The same method can be used to show that the conic, or affine, or linear hull of a set $S$ is the intersection of all conic sets, or affine sets, or subspaces that contain $S$.)
 ]
 
-*_Proof_*: $C_1 = conv S$ とし, $C_2$ を $S$ を含む全ての凸集合の共通部分とする. \
+*解答*: $C_1 = conv S$ とし, $C_2$ を $S$ を含む全ての凸集合の共通部分とする. \
 ($C_1 subset C_2$) $x_1, dots, x_k$ を $S$ 内の任意の $k$ 点, $theta_1, dots, theta_k$ は $theta_i >= 0$, $theta_1 + dots + theta_k = 1$ を満たす任意の実数とする.
 $S$ を含む任意の凸集合 $C$ について $theta_1 x_1 + dots + theta_k x_k in C$ であるから $theta_1 x_1 + dots + theta_k x_k in C_2$ であり,
 従って $C_1 subset C_2$ である. \
@@ -133,11 +165,13 @@ $S$ を含む任意の凸集合 $C$ について $theta_1 x_1 + dots + theta_k x
 
 = Examples
 
-#exercise(full-title: [Exercise 2.5])[
+== Exercise 2.5
+
+#ex[
   What is the distance between two parallel hyperplanes ${x in RR^n mid(|) a^T x = b_1}$ and ${x in RR^n mid(|) a^T x = b_2}$?
 ]
 
-*_Proof_*: 1 つ目の集合を $S_1$, 2 つ目の集合を $S_2$ とする.
+*解答*: 1 つ目の集合を $S_1$, 2 つ目の集合を $S_2$ とする.
 これらの距離とは
 $
   dist (S_1, S_2) = inf {norm(u - v)_2 mid(|) u in S_1, v in S_2}
@@ -152,7 +186,9 @@ $
 $
 となる. $qed$
 
-#exercise(full-title: [Exercise 2.6])[
+== Exercise 2.6
+
+#ex[
   _When does one halfspace contain another?_ Give conditions under which
   $
     {x mid(|) a^T x <= b} subset.eq {x mid(|) hat(a)^T x <= hat(b)}
@@ -161,7 +197,7 @@ $
   Also find the conditions under which the two halfspaces are equal.
 ]
 
-*_Proof_*: $S_1 = {x mid(|) a^T x <= b}$, $S_2 = {x mid(|) hat(a)^T x <= hat(b)}$ とおき,
+*解答*: $S_1 = {x mid(|) a^T x <= b}$, $S_2 = {x mid(|) hat(a)^T x <= hat(b)}$ とおき,
 $H_1 = {x mid(|) a^T x = 0}$, $H_2 = {x mid(|) hat(a)^T x = 0}$ とおく.
 $S_1 subset.eq S_2$ であるためには $hat(a)$ が $a$ の正の定数倍かつ $frac(b, norm(a), style: "horizontal") <= frac(hat(b), norm(hat(a)), style: "horizontal")$ でなければならないことを示す.
 まず, $H_1 subset.eq H_2$ であることを示す.
@@ -186,14 +222,16 @@ $
 2 つの半空間が等しくなるのは $a$ と $hat(a)$ が互いに正の定数倍で移り合い,
 $frac(b, norm(a), style: "horizontal") = frac(hat(b), norm(hat(a)), style: "horizontal")$ のときである. $qed$
 
-#exercise(full-title: [Exercise 2.7 (Voronoi description of halfspace)])[
+== Exercise 2.7 (Voronoi description of halfspace)
+
+#ex[
   Let $a$ and $b$ be distinct points in $RR^n$.
   Show that the set of all points that are closer (in Euclidean norm) to $a$ than $b$,
   i.e., ${x mid(|) norm(x - a)_2 <= norm(x - b)_2}$ is a half space.
   Describe it explicitly as an inequality of the form $c^T x <= d$. Draw a picture.
 ]
 
-*_Proof_*: 条件式を同値変形していくと次のようになる.
+*解答*: 条件式を同値変形していくと次のようになる.
 $
                         norm(x - a)_2 & <= norm(x - b)_2 \
                       norm(x - a)_2^2 & <= norm(x - b)_2^2 \
@@ -240,19 +278,21 @@ $
   },
 )
 
-#exercise(full-title: [Exercise 2.8])[
+== Exercise 2.8
+
+#ex[
   Which of the following sets $S$ are polyhedra?
   If possible, express $S$ in the form $S = { x mid(|) A x prec.eq b, F x = g}$.
 
   #alpha-enum(
     [$S = {y_1 a_1 + y_2 a_2 mid(|) -1 <= y_1 <= 1, -1 <= y_2 <= 1}$, where $a_1, a_2 in RR^n$ ],
     [$S = {x in RR^n mid(|) x succ.eq 0, bold(1)^T x = 1, sum_(i=1)^n x_i a_i = b_1, sum_(i=1)^n x_i a_i^2 = b_2}$, where $a_1, dots, a_n in RR$ and $b_1, b_2 in RR$. ],
-    [$S = { x in RR^n mid(|) x succ.eq 0, x^T y <= 1, "for all" y "with" norm(y)_2 = 1}$ ],
-    [$S = { x in RR^n mid(|) x succ.eq 0, x^T y <= 1, "for all" y "with" sum_(i=1)^n abs(y_i) = 1}$],
+    [$S = {x in RR^n mid(|) x succ.eq 0, x^T y <= 1, "for all" y "with" norm(y)_2 = 1}$ ],
+    [$S = {x in RR^n mid(|) x succ.eq 0, x^T y <= 1, "for all" y "with" sum_(i=1)^n abs(y_i) = 1}$],
   )
 ]
 
-*_Proof_*: (a), (b), (d) が多面体であり, (c) だけが多面体でない.
+*解答*: (a), (b), (d) が多面体であり, (c) だけが多面体でない.
 #alpha-enum(
   [
     $a_1$ と $a_2$ が線形独立の場合のみ示す. 他の場合は省略.
