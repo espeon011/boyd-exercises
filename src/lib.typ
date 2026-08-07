@@ -41,15 +41,30 @@
     "blockquote",
     attrs: (
       cite: "https://web.stanford.edu/~boyd/cvxbook/",
-      style: "--en-prose-quote-borders: #f97316; font-style: normal; quotes: none;",
+      lang: "en",
+      style: "border-inline-start-color: #f97316; font-style: normal; quotes: none;",
     ),
-    html.elem("p", quote-mark() + body),
+    {
+      html.elem("div", quote-mark() + body)
+      html.elem(
+        "footer",
+        attrs: (style: "margin-top: 0.6em; font-size: 0.82em; opacity: 0.7;"),
+        {
+          "— Boyd and Vandenberghe, "
+          html.elem("cite", attrs: (style: "font-style: normal;"), "Convex Optimization")
+        },
+      )
+    },
   )
 } else {
   block(
     width: 100%,
     inset: (left: 0.9em, top: 0.2em, bottom: 0.2em),
     stroke: (left: 2pt + rgb("#f97316")),
-    text(fill: luma(45%))[#text(fill: rgb("#f97316"), size: 2.2em, weight: "bold")[“]#body],
+    {
+      text(fill: luma(45%), lang: "en")[#text(fill: rgb("#f97316"), size: 2.2em, weight: "bold")[“]#body]
+      linebreak()
+      text(size: 0.82em, fill: luma(55%), lang: "en")[— Boyd and Vandenberghe, _Convex Optimization_]
+    },
   )
 }
