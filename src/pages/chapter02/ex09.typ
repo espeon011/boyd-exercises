@@ -1,4 +1,5 @@
 #import "../../lib.typ": alpha-enum, ex
+#import "@preview/cetz:0.5.2"
 
 #let int = math.op("int")
 
@@ -85,11 +86,30 @@
     一般には成り立たない. $RR^2$ 内で反例を示す. 以下のように置く.
     $
       P_1 = {mat(x; y) in RR^2 mid(|) y >= 0}
-      , quad P_2 = {mat(x; y) in RR^2 mid(|) x <= 0, y <= 0},
+      , quad P_2 = {mat(x; y) in RR^2 mid(|) x <= 0, y <= 0}
       , quad P_3 = {mat(x; y) in RR^2 mid(|) x >= 0, y <= 0}
     $
 
-    #highlight[TODO]: #underline[図をここに]
+    #let non-voronoi = cetz.canvas(length: 1cm, {
+      import cetz.draw: *
+      let ink = rgb(130, 130, 130)
+      let region(a, b, pos, label, color) = {
+        rect(a, b, fill: color.transparentize(75%), stroke: none)
+        content(pos, text(fill: color, label))
+      }
+      region((-4, 0), (4, 2), (-3, 1.3), $P_1$, rgb(65, 105, 225))
+      region((-4, -2), (0, 0), (-3, -1.4), $P_2$, rgb(34, 139, 34))
+      region((0, -2), (4, 0), (3, -1.4), $P_3$, rgb(205, 110, 40))
+      set-style(stroke: (paint: ink, thickness: 1.2pt))
+      line((-4, 0), (4, 0))
+      line((0, -2), (0, 0))
+      content((3.0, 0.25), text(fill: ink, $y = 0$), anchor: "west")
+    })
+
+    #figure(
+      context if target() == "html" { html.frame(non-voronoi) } else { non-voronoi },
+      caption: [Voronoi 領域として表現できない多面体分割],
+    )
 
     そして点 $p_1 = (x_1, y_1)^T in P_1$, $p_2 = (x_2, y_2)^T in P_2$, $p_3 = (x_3, y_3)^T in P_3$ が存在して
     $

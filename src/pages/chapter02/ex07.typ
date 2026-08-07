@@ -20,6 +20,7 @@ $
 $
 従って $c = b - a$, $d = frac((norm(b)_2^2 - norm(a)_2^2), 2, style: "horizontal")$ とすれば ${x mid(|) norm(x - a)_2 <= norm(x - b)_2} = {x mid(|) c^T x <= d}$ である. \
 図示すると次のようになる. ここで $m = frac((a + b), 2, style: "horizontal")$ である. $qed$
+
 #let halfspace-figure = cetz.canvas(length: 1cm, {
   import cetz.draw: *
   let (xmin, xmax) = (-3.5, 3.5)
@@ -50,9 +51,6 @@ $
   point((0.5, 0.5), $m$, anchor: "east", color: rgb(220, 20, 60))
 })
 #figure(
-  context if target() == "html" {
-    html.frame(halfspace-figure)
-  } else {
-    halfspace-figure
-  },
+  context if target() == "html" { html.frame(halfspace-figure) } else { halfspace-figure },
+  caption: [$b$ よりも $a$ に近い (等しい場合も含む) 点全体がなす半空間],
 )
