@@ -2,7 +2,7 @@
 
 #book(
   debug: false,
-  title: "Convex Optimization 演習問題",
+  title: "Convex Optimization 演習問題解答",
   lang: "ja",
   canonical-url: "https://espeon011.github.io",
   root: "boyd-exercises",
@@ -11,7 +11,7 @@
     sidebar-image: html.a(
       href: "/boyd-exercises",
       class: "block p-4 text-xl font-bold text-center dark:text-white no-underline",
-      "Convex Optimization\n演習問題",
+      "Convex Optimization\n演習問題解答",
     ),
     summary-image-renderer: new-hamber.summary-image-renderer.with(
       "Convex Optimization Ex",
