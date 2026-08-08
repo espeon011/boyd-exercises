@@ -79,10 +79,12 @@
         html.elem("span", name)
         html.elem(
           "div",
-          attrs: (style: "background: currentColor; opacity: 0.15; height: 0.5em; border-radius: 0.25em;"),
+          attrs: (
+            style: "background: color-mix(in srgb, currentColor 15%, transparent); height: 0.5em; border-radius: 0.25em; overflow: hidden;",
+          ),
           html.elem(
             "div",
-            attrs: (style: "background: #f97316; width: " + str(pct) + "%; height: 100%; border-radius: 0.25em;"),
+            attrs: (style: "background: #16a34a; width: " + str(pct) + "%; height: 100%; border-radius: inherit;"),
             [],
           ),
         )
