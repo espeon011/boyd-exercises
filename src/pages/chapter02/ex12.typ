@@ -168,6 +168,6 @@
       & <=> sum_(i=1)^n (x_i^2 -2 (a_i - theta^2 b_i) / (1 - theta^2) x_i + (a_i^2 - theta^2 b_i^2) / (1 - theta^2)) <= 0 \
       & <=> sum_(i=1)^n (x_i - (a_i - theta^2 b_i) / (1 - theta^2))^2 <= theta^2 / (1 - theta^2)^2 sum_(i=1)^n (a_i - b_i)^2
     $
-    となる. これが表す集合は円板であり, 凸である. $qed$
+    となる. これが表す集合は球体であり, 凸である. $qed$
   ],
 )
