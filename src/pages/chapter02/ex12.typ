@@ -138,8 +138,7 @@
       // 中点 (0, 1)^T は集合に属さない
       circle((0, 1), radius: 0.14, fill: white, stroke: (paint: pt-color, thickness: 1.2pt))
       circle((0, 1), radius: 0.075, fill: src-color, stroke: none)
-      content((0, 1.2), anchor: "south", text(fill: pt-color, size: 0.85em)[中点 $mat(0; 1)$])
-      content((0, 2), anchor: "south", text(fill: src-color, size: 0.9em)[$T = {mat(0; 1)}$])
+      content((0, 1.3), anchor: "south", text(fill: src-color, size: 0.9em)[$T = {mat(0; 1)}$])
     })
 
     #figure(
