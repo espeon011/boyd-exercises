@@ -62,3 +62,51 @@
     },
   )
 }
+
+// 進捗バー 1 行分.
+#let progress-row(name, solved, total) = context {
+  let ratio = if total > 0 { solved / total } else { 0.0 }
+  let pct = calc.round(ratio * 100, digits: 1)
+  let count = str(solved) + " / " + str(total)
+
+  if target() == "html" {
+    html.elem(
+      "div",
+      attrs: (
+        style: "display: grid; grid-template-columns: 1fr 8em 4.5em; align-items: center; gap: 0.8em; margin: 0.5em 0;",
+      ),
+      {
+        html.elem("span", name)
+        html.elem(
+          "div",
+          attrs: (style: "background: currentColor; opacity: 0.15; height: 0.5em; border-radius: 0.25em;"),
+          html.elem(
+            "div",
+            attrs: (style: "background: #f97316; width: " + str(pct) + "%; height: 100%; border-radius: 0.25em;"),
+            [],
+          ),
+        )
+        html.elem(
+          "span",
+          attrs: (style: "font-variant-numeric: tabular-nums; opacity: 0.7; text-align: right;"),
+          count,
+        )
+      },
+    )
+  } else {
+    grid(
+      columns: (1fr, 8em, 4.5em),
+      align: (left + horizon, left + horizon, right + horizon),
+      column-gutter: 0.8em,
+      name,
+      box(
+        width: 100%,
+        height: 0.5em,
+        radius: 0.25em,
+        fill: luma(85%),
+        align(left, rect(width: ratio * 100%, height: 100%, radius: 0.25em, fill: rgb("#f97316"))),
+      ),
+      text(fill: luma(45%), count),
+    )
+  }
+}
