@@ -5,23 +5,15 @@
   if target() == "html" {
     html.elem(
       "ol",
-      attrs: (style: "list-style: none; padding: 0; margin: 0.5em 0 0.5em 1.5em;"),
-      items
-        .pos()
-        .enumerate()
-        .map(((i, body)) => html.elem(
-          "li",
-          attrs: (style: "display: flex; align-items: baseline; margin: 0.4em 0; padding: 0;"),
-          {
-            html.elem(
-              "span",
-              attrs: (style: "flex: none; margin: 0 0.5em 0 0; padding: 0;"),
-              numbering("(a)", i + start),
-            )
-            html.elem("div", attrs: (style: "margin: 0; padding: 0; min-width: 0;"), body)
-          },
-        ))
-        .join(),
+      attrs: (class: "alpha-enum", start: str(start)),
+      {
+        html.elem(
+          "style",
+          ".alpha-enum { padding: 0; margin: 0.5em 0 0.5em 1.5em; } "
+            + ".alpha-enum > li::marker { content: \"(\" counter(list-item, lower-alpha) \") \"; }",
+        )
+        items.pos().map(body => html.elem("li", body)).join()
+      },
     )
   } else {
     enum(numbering: "(a)", start: start, ..items)
