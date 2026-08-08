@@ -1,5 +1,4 @@
-#import "../../lib.typ": alpha-enum, ex
-#import "@preview/cetz:0.5.2"
+#import "../../lib.typ": alpha-enum, cetz, ex
 
 == Exercise 2.7 (Voronoi description of halfspace) <ex-2-7>
 

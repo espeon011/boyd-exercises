@@ -1,5 +1,4 @@
-#import "../../lib.typ": alpha-enum, ex
-#import "@preview/cetz:0.5.2"
+#import "../../lib.typ": alpha-enum, cetz, ex
 
 #let int = math.op("int")
 
