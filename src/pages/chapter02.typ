@@ -23,6 +23,8 @@
 
 = Operations that preserve convexity
 
+#include "chapter02/ex16.typ"
+
 WIP
 
 = Separation theorems and supporting hyperplanes
