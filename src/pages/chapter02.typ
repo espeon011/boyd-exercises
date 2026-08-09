@@ -19,10 +19,11 @@
 #include "chapter02/ex12.typ"
 #include "chapter02/ex13.typ"
 #include "chapter02/ex14.typ"
-
-WIP
+#include "chapter02/ex15.typ"
 
 = Operations that preserve convexity
+
+WIP
 
 = Separation theorems and supporting hyperplanes
 

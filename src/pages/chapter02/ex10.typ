@@ -1,6 +1,6 @@
 #import "../../lib.typ": alpha-enum, ex
 
-== Exercise 2.10 (Solution set of a quadratic inequality)
+== Exercise 2.10 (Solution set of a quadratic inequality) <ex-2-10>
 
 #ex[
   Let $C subset RR^n$ be the solution set of a quadratic inequality,
