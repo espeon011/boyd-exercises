@@ -37,6 +37,10 @@
     & <= theta f(x) + (1 - theta) f(y) <= 0$
 
     従って $z in C$ である.
+
+    逆は一般には成立しない.
+    $n = 1$ で反例を示す.
+    $C = {x in RR mid(|) - x^2 <= 0}$ とおくと $C = RR$ は凸だが $A = -1$ は半正定値ではない.
   ],
   [
     条件を満たす $lambda in RR$ を 1 つとり, 次のように定める.
@@ -54,6 +58,19 @@
     $
     であり, 従って $x in L$ であるとき $x in C <=> x in D$ である.
     つまり $C inter L = D inter L$ である.
-    ゆえに $C inter L$ は凸である. $qed$
+    ゆえに $C inter L$ は凸である.
+
+    逆は一般には成り立たない.
+    $n = 2$ で反例を示す.
+    $
+      A = mat(-1, 0; 0, -1), quad b = 0, quad c = 0, quad g = mat(0; 1), quad h = 0
+    $
+    とおくと $C = RR^2$ である, $L$ は $x_1$ 軸に等しい.
+    従って $C inter L = L = {x in R^2 mid(|) x_2 = 0}$ であり凸である.
+    一方で任意の $lambda in RR$ に対して
+    $
+      A + lambda g g^T = mat(-1, 0; 0, lambda - 1)
+    $
+    となり, $A + lambda g g^T$ は必ず固有値 $-1$ をもつ. $qed$
   ],
 )
