@@ -23,7 +23,7 @@
           ];
           text = ''
             cd "$(git rev-parse --show-toplevel)"
-            rm -rf docs
+            rm -rf docs/boyd-exercises
             typst compile --features bundle,html --format bundle src/main.typ ./docs
             pagefind --site ./docs --output-subdir boyd-exercises/pagefind
           '';
