@@ -28,10 +28,28 @@
             pagefind --site ./docs --output-subdir boyd-exercises/pagefind
           '';
         };
+        watch = pkgs.writeShellApplication {
+          name = "watch";
+          runtimeInputs = [
+            pkgs.typst
+            pkgs.git
+          ];
+          text = ''
+            cd "$(git rev-parse --show-toplevel)"
+            rm -rf docs/boyd-exercises
+            typst watch --features bundle,html --format bundle src/main.typ ./docs
+          '';
+        };
       in {
-        apps.compile = {
-          type = "app";
-          program = "${compile}/bin/compile";
+        apps = {
+          compile = {
+            type = "app";
+            program = "${compile}/bin/compile";
+          };
+          watch = {
+            type = "app";
+            program = "${watch}/bin/watch";
+          };
         };
         devShells.default = pkgs.mkShell {
           packages = [
