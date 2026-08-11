@@ -26,9 +26,10 @@
 #include "chapter02/ex16.typ"
 #include "chapter02/ex17.typ"
 #include "chapter02/ex18.typ"
-
-WIP
+#include "chapter02/ex19.typ"
 
 = Separation theorems and supporting hyperplanes
+
+WIP
 
 = Convex cones and generalized inequalities
