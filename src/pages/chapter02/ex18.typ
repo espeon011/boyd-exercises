@@ -33,10 +33,10 @@ $f$ は $J: x |-> (x, 1)$ と perspective function $P: (x, t) |-> hfrac(x, t)$ �
 $hat(c)^T y + hat(d)$ は $Q^(-1) J y$ の 第 $n + 1$ 成分の値であるが,
 $
   Q^(-1) J y & = Q^(-1) J P Q J x \
-             & = Q^(-1) mat((A x + b) / (c^T x + d); 1) \
-             & = 1 / (c^T x + d) Q^(-1) mat(A x + b; c^T x + d) \
-             & = 1 / (c^T x + d) Q^(-1) Q mat(x; 1) \
-             & = 1 / (c^T x + d) mat(x; 1)
+             & = Q^(-1) vec((A x + b) / (c^T x + d), 1) \
+             & = 1 / (c^T x + d) Q^(-1) vec(A x + b, c^T x + d) \
+             & = 1 / (c^T x + d) Q^(-1) Q vec(x, 1) \
+             & = 1 / (c^T x + d) vec(x, 1)
 $
 より第 $n + 1$ 成分は $hfrac(1, (c^T x + d)) > 0$ であり,
 従って $f({x in RR^n mid(|) c^T x + d > 0}) subset {y in RR^n mid(|) hat(c)^T y + hat(d) > 0}$ である.
@@ -48,10 +48,10 @@ $g(y) = hfrac((hat(A) y + hat(b)), (hat(c)^T y + hat(d)))$ である.
 最後に $g f = id$, $f g = id$ を示す.
 $
   g f (x) & = P Q^(-1) J P Q J x \
-          & = P (1 / (c^T x + d) mat(x; 1)) \
+          & = P (1 / (c^T x + d) vec(x, 1)) \
           & = x, \
   f g (y) & = P Q J P Q^(-1) J y \
-          & = P (1 / (hat(c)^T x + hat(d)) mat(y; 1)) \
+          & = P (1 / (hat(c)^T x + hat(d)) vec(y, 1)) \
           & = y.
 $
 従って $g$ は $f$ の逆写像である.
