@@ -1,24 +1,6 @@
 #import "@preview/cetz:0.5.2"
 
 // (a), (b), (c), ... で番号づけする enum 関数
-// #let alpha-enum(..items, start: 1) = context {
-//   if target() == "html" {
-//     html.elem(
-//       "ol",
-//       attrs: (class: "alpha-enum", start: str(start)),
-//       {
-//         html.elem(
-//           "style",
-//           ".alpha-enum { padding: 0; margin: 0.5em 0 0.5em 1.5em; } "
-//             + ".alpha-enum > li::marker { content: \"(\" counter(list-item, lower-alpha) \") \"; }",
-//         )
-//         items.pos().map(body => html.elem("li", body)).join()
-//       },
-//     )
-//   } else {
-//     enum(numbering: "(a)", start: start, ..items)
-//   }
-// }
 #let alpha-enum(..items, start: 1) = context {
   if target() == "html" {
     html.elem(
