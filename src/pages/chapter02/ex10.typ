@@ -29,12 +29,14 @@
     $x, y in C$ とし, $theta in [0, 1]$ とする.
     $z = theta x + (1 - theta) y$ とすると
 
-    $z^T A z + b^T z + c & = (theta x + (1 - theta) y)^T A (theta x + (1 - theta) y) + b^T (theta x + (1 - theta) y) + c \
-    & = theta^2 x^T A x + theta b^T x + theta c + (1 - theta)^2 y^T A y + (1 - theta) b^T y + (1 - theta) c + 2 theta (1 - theta) y^T A x \
-    & = theta (x^T A x + b^T x + c) + (1 - theta) (y^T A y + b^T y + c) - theta (1 - theta) (x^T A x - 2 y^T A x + y^T A y) \
-    & = theta f(x) + (1 - theta) f(y) - theta (1 - theta) (x^T A x - 2 y^T A x + y^T A y) \
-    & = theta f(x) + (1 - theta) f(y) - theta (1 - theta) (x - y)^T A (x - y) \
-    & <= theta f(x) + (1 - theta) f(y) <= 0$
+    $
+      z^T A z + b^T z + c & = (theta x + (1 - theta) y)^T A (theta x + (1 - theta) y) + b^T (theta x + (1 - theta) y) + c \
+      & = theta^2 x^T A x + theta b^T x + theta c + (1 - theta)^2 y^T A y + (1 - theta) b^T y + (1 - theta) c + 2 theta (1 - theta) y^T A x \
+      & = theta (x^T A x + b^T x + c) + (1 - theta) (y^T A y + b^T y + c) - theta (1 - theta) (x^T A x - 2 y^T A x + y^T A y) \
+      & = theta f(x) + (1 - theta) f(y) - theta (1 - theta) (x^T A x - 2 y^T A x + y^T A y) \
+      & = theta f(x) + (1 - theta) f(y) - theta (1 - theta) (x - y)^T A (x - y) \
+      & <= theta f(x) + (1 - theta) f(y) <= 0
+    $
 
     従って $z in C$ である.
 

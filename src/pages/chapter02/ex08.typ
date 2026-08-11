@@ -7,10 +7,18 @@
   If possible, express $S$ in the form $S = { x mid(|) A x prec.eq b, F x = g}$.
 
   #alpha-enum(
-    [$S = {y_1 a_1 + y_2 a_2 mid(|) -1 <= y_1 <= 1, -1 <= y_2 <= 1}$, where $a_1, a_2 in RR^n$ ],
-    [$S = {x in RR^n mid(|) x succ.eq 0, bold(1)^T x = 1, sum_(i=1)^n x_i a_i = b_1, sum_(i=1)^n x_i a_i^2 = b_2}$, where $a_1, dots, a_n in RR$ and $b_1, b_2 in RR$. ],
-    [$S = {x in RR^n mid(|) x succ.eq 0, x^T y <= 1, "for all" y "with" norm(y)_2 = 1}$ ],
-    [$S = {x in RR^n mid(|) x succ.eq 0, x^T y <= 1, "for all" y "with" sum_(i=1)^n abs(y_i) = 1}$],
+    [
+      $S = {y_1 a_1 + y_2 a_2 mid(|) -1 <= y_1 <= 1, -1 <= y_2 <= 1}$, where $a_1, a_2 in RR^n$
+    ],
+    [
+      $S = {x in RR^n mid(|) x succ.eq 0, bold(1)^T x = 1, sum_(i=1)^n x_i a_i = b_1, sum_(i=1)^n x_i a_i^2 = b_2}$, where $a_1, dots, a_n in RR$ and $b_1, b_2 in RR.$
+    ],
+    [
+      $S = {x in RR^n mid(|) x succ.eq 0, x^T y <= 1, "for all" y "with" norm(y)_2 = 1}$
+    ],
+    [
+      $S = {x in RR^n mid(|) x succ.eq 0, x^T y <= 1, "for all" y "with" sum_(i=1)^n abs(y_i) = 1}$
+    ],
   )
 ]
 
