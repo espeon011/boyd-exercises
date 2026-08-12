@@ -31,6 +31,7 @@
 = Separation theorems and supporting hyperplanes
 
 #include "chapter02/ex20.typ"
+#include "chapter02/ex21.typ"
 
 WIP
 
