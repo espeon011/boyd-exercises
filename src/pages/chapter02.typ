@@ -30,6 +30,8 @@
 
 = Separation theorems and supporting hyperplanes
 
+#include "chapter02/ex20.typ"
+
 WIP
 
 = Convex cones and generalized inequalities
