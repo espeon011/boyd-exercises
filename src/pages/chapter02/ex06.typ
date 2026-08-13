@@ -1,6 +1,6 @@
 #import "../../lib.typ": alpha-enum, ex
 
-== Exercise 2.6
+== Exercise 2.6 <ex-2-6>
 
 #ex[
   _When does one halfspace contain another?_ Give conditions under which

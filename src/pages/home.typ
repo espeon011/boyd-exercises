@@ -12,7 +12,7 @@ Typst パッケージの #link("https://typst.app/universe/package/haita")[Haita
 
 *Part I Theory*
 
-#progress-row("Chapter 2: Convex sets", 22, 39)
+#progress-row("Chapter 2: Convex sets", 23, 39)
 #progress-row("Chapter 3: Convex functions", 0, 57)
 #progress-row("Chapter 4: Convex optimization problems", 0, 65)
 #progress-row("Chapter 5: Duality", 0, 44)
