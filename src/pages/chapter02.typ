@@ -37,7 +37,8 @@
 #include "chapter02/ex24.typ"
 #include "chapter02/ex25.typ"
 #include "chapter02/ex26.typ"
-
-WIP
+#include "chapter02/ex27.typ"
 
 = Convex cones and generalized inequalities
+
+WIP
