@@ -2,7 +2,7 @@
 
 #let conv = math.op("conv")
 
-== Exercise 2.4
+== Exercise 2.4 <ex-2-4>
 
 #ex[
   Show that the convex hull of a set $S$ is the intersection of all convex sets that contain $S$.
