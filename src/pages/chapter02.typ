@@ -36,6 +36,7 @@
 #include "chapter02/ex23.typ"
 #include "chapter02/ex24.typ"
 #include "chapter02/ex25.typ"
+#include "chapter02/ex26.typ"
 
 WIP
 
