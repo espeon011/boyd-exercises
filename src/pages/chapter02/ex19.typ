@@ -83,6 +83,6 @@
     $
       x |-> sum_(j=1)^m x_j E_j + F
     $
-    による positive semidefinite cone $bold(S)_+^p$ の逆像である.
+    による positive semidefinite cone $bold(S)_+^p$ の逆像である. $qed$
   ],
 )

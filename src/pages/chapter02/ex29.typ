@@ -118,7 +118,7 @@
     $
     と同値.
 
-    $x prec.eq_K y$ であることを図示すると次のようになる.
+    $x prec.eq_K y$ であることを図示すると次のようになる. $qed$
 
     #let ex29-order-fig = cetz.canvas(length: 1cm, {
       import cetz.draw: *
