@@ -1,5 +1,7 @@
 #import "@preview/haita:0.3.0": *
 
+#set text(lang: "ja")
+
 #book(
   debug: false,
   title: "Convex Optimization 演習問題解答",
