@@ -41,4 +41,6 @@
 
 = Convex cones and generalized inequalities
 
+#include "chapter02/ex28.typ"
+
 WIP
