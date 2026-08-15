@@ -38,10 +38,9 @@ $
 $
 が成り立つ.
 実際 $F$ が空でなければ
-- $$ $conv F$ は凸集合.
-- $$ $conv F subset E$ より $0 in.not conv F$. 従って ${0} inter conv F = nothing$.
-- $$ $conv F$ は閉集合であるからノルムが最小である点 $v_F in conv F$ が存在する.
-// Safari で箇条書きの先頭の数式がずれて表示されることへの対処
+- $conv F$ は凸集合.
+- $conv F subset E$ より $0 in.not conv F$. 従って ${0} inter conv F = nothing$.
+- $conv F$ は閉集合であるからノルムが最小である点 $v_F in conv F$ が存在する.
 より $section$2.5.1 の結果から ${0}$ と $conv F$ を分離する超平面 ${x mid(|) a_F^T x = b_F}$ が存在する ($a_F eq.not 0$, $a_F^T 0 >= b_F$, $a_F^T w <= b_F thick (forall w in conv F)$).
 このとき $w in conv F$ に対して $a_F^T w <= 0$ である.
 $hat(a)_F = frac(a_F, norm(a_F), style: "horizontal")$ とおけば $hat(a)_F in inter.big_(w in F) K_w$ である.

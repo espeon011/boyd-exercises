@@ -20,6 +20,7 @@
         Solutions for exercises from Stephen Boyd and Lieven Vandenberghe's Convex Optimization
       ],
     ),
+    extra-css: read("/assets/li-math-fix.css"),
   ),
   tree: (
     chapter("index", content: include "pages/home.typ"),

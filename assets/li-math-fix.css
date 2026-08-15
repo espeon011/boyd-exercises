@@ -1,0 +1,4 @@
+/* Safari において箇条書き先頭の数式が下にずれる問題への対処 */
+.prose :is(li, dt, dd) > math {
+    margin-block: 0;
+}

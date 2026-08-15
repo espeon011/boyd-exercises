@@ -24,7 +24,7 @@
           text = ''
             cd "$(git rev-parse --show-toplevel)"
             rm -rf docs/boyd-exercises
-            typst compile --features bundle,html --format bundle src/main.typ ./docs
+            typst compile --features bundle,html --format bundle src/main.typ ./docs --root ./
             pagefind --site ./docs --output-subdir boyd-exercises/pagefind
           '';
         };
@@ -37,7 +37,7 @@
           text = ''
             cd "$(git rev-parse --show-toplevel)"
             rm -rf docs/boyd-exercises
-            typst watch --features bundle,html --format bundle src/main.typ ./docs
+            typst watch --features bundle,html --format bundle src/main.typ ./docs --root ./
           '';
         };
       in {
