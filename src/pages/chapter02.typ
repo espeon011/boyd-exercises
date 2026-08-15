@@ -42,5 +42,6 @@
 = Convex cones and generalized inequalities
 
 #include "chapter02/ex28.typ"
+#include "chapter02/ex29.typ"
 
 WIP
