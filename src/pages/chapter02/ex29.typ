@@ -37,7 +37,7 @@
     ],
     [
       When is $K$ proper (hence, defines a generalized inequality)?
-      Draw a plot illustrating what $x prec.eq_K y$ means when $K$ is proper.
+      Draw a plot illustrating what $x scripts(prec.eq)_K y$ means when $K$ is proper.
     ],
   )
 ]
@@ -118,7 +118,7 @@
     $
     と同値.
 
-    $x prec.eq_K y$ であることを図示すると次のようになる. $qed$
+    $x scripts(prec.eq)_K y$ であることを図示すると次のようになる. $qed$
 
     #let ex29-order-fig = cetz.canvas(length: 1cm, {
       import cetz.draw: *
@@ -149,13 +149,13 @@
       point(shift(x, 50deg, 2.4), $y$, "west")
       point((-1.8, 1.2), $z$, "east")
 
-      content((2.5, -1.0), text(size: 9pt, fill: ink)[$x prec.eq_K y <==> y in x + K$])
-      content((-1.2, 1.5), text(size: 9pt, fill: ink)[$x prec.eq.not_K z$])
+      content((2.5, -1.0), text(size: 9pt, fill: ink)[$x scripts(prec.eq)_K y <==> y in x + K$])
+      content((-1.2, 1.5), text(size: 9pt, fill: ink)[$x scripts(prec.eq.not)_K z$])
     })
 
     #figure(
       context if target() == "html" { html.frame(ex29-order-fig) } else { ex29-order-fig },
-      caption: [$x prec.eq_K y$ なる点全体は $x$ を頂点とする錐 $x + K$. ],
+      caption: [$x scripts(prec.eq)_K y$ なる点全体は $x$ を頂点とする錐 $x + K$. ],
     )
   ],
 )
