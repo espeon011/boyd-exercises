@@ -44,5 +44,6 @@
 #include "chapter02/ex28.typ"
 #include "chapter02/ex29.typ"
 #include "chapter02/ex30.typ"
+#include "chapter02/ex31.typ"
 
 WIP
