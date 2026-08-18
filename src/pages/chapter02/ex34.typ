@@ -63,7 +63,7 @@
 
       // 斜投影: x_1 は右, x_2 は奥, x_3 は上
       let p(x1, x2, x3) = (x1 + 0.5 * x2, 0.32 * x2 + x3)
-      let (w, d, h) = (2.8, 2.2, 2.2)
+      let (w, d, h) = (2.2, 2.2, 2.2)
 
       // k = 0: x_1 > 0 (可視な 3 面を描く)
       let face(..pts) = line(..pts.pos(), close: true, fill: c0.transparentize(86%), stroke: (
@@ -108,11 +108,11 @@
 
       // 座標軸
       set-style(stroke: (paint: ink, thickness: 0.6pt), mark: (end: "straight", fill: ink, scale: 0.7))
-      line(p(-1.2, 0, 0), p(w + 0.7, 0, 0))
+      line(p(-1.2, 0, 0), p(w + 1.7, 0, 0))
       line(p(0, -d - 0.5, 0), p(0, d + 0.6, 0))
       line(p(0, 0, -h - 0.4), p(0, 0, h + 0.8))
       set-style(mark: (end: none))
-      content(p(w + 0.9, 0, 0), anchor: "west", text(fill: ink, size: 0.85em)[$x_1$])
+      content(p(w + 1.9, 0, 0), anchor: "west", text(fill: ink, size: 0.85em)[$x_1$])
       content(p(0, d + 0.8, 0), anchor: "west", text(fill: ink, size: 0.85em)[$x_2$])
       content(p(0, 0, h + 1.0), anchor: "south", text(fill: ink, size: 0.85em)[$x_3$])
 
@@ -125,16 +125,16 @@
       // 原点は含まれる
       circle(p(0, 0, 0), radius: 0.09, fill: c-o, stroke: none)
 
-      content(p(1.6, -d, -h - 0.6), text(fill: c0, size: 0.85em)[$k = 0: thick x_1 > 0$])
-      content(p(0, d + 0.3, h + 0.3), anchor: "west", text(
+      content(p(1.6, -d, -h - 0.6), text(fill: c0, size: 0.85em)[$k = 0 \ x_1 > 0$])
+      content(p(-0.5, d + 0.3, h + 0.3), anchor: "west", text(
         fill: c1,
         size: 0.85em,
-      )[$k = 1: thick x_1 = 0, thick x_2 > 0$])
-      content(p(-1.3, 0, 1.4), anchor: "east", text(
+      )[$k = 1 \ x_1 = 0, thick x_2 > 0$])
+      content(p(-0.25, 0, 2.5), anchor: "east", text(
         fill: c2,
         size: 0.85em,
-      )[$k = 2: thick x_1 = x_2 = 0, thick x_3 > 0$])
-      content(p(-0.25, 0, -0.25), anchor: "north-east", text(fill: c-o, size: 0.85em)[${0}$])
+      )[$k = 2 \ x_1 = x_2 = 0, thick x_3 > 0$])
+      content(p(-0.125, 0, 0.5), anchor: "north-east", text(fill: c-o, size: 0.85em)[${0}$])
     })
 
     #figure(
