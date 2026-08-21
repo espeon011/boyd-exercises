@@ -40,8 +40,8 @@
 従って $K$ は proper cone である.
 
 行列の内積を $chevron.l X, Y chevron.r = tr (X^T Y)$ と書く.
+$L = {z z^T mid(|) z in RR^n, thick z succ.eq 0}$ とおくと $L$ は錐であり,
 トレースの性質より $z^T X z = tr (z z^T X) = chevron.l z z^T, X chevron.r$ であるから
-$L = {z z^T mid(|) z in RR^n, thick z succ.eq 0}$ とおくと $L$ は錐であり
 $
   K = {X in bold(S)^n mid(|) forall Z in L, thick chevron.l Z, X chevron.r >= 0} = L^*
 $
