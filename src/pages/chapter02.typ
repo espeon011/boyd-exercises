@@ -52,5 +52,4 @@
 #include "chapter02/ex36.typ"
 #include "chapter02/ex37.typ"
 #include "chapter02/ex38.typ"
-
-WIP
+#include "chapter02/ex39.typ"
