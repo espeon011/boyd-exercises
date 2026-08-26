@@ -1,6 +1,6 @@
 #import "../../lib.typ": ex
 
-== Exercise 2.32
+== Exercise 2.32 <ex-2-32>
 
 #ex[
   Find the dual cone of ${A x mid(|) x succ.eq 0}$, where $A in RR^(m times n)$.
