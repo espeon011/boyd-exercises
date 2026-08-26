@@ -29,7 +29,7 @@
     std.divider(),
     [= Part I Theory],
     chapter("chapter02", content: include "pages/chapter02.typ"),
-    // chapter("chapter03", content: include "pages/chapter03.typ"),
+    chapter("chapter03", content: include "pages/chapter03.typ"),
     std.divider(),
     [= Part II Applications],
     std.divider(),
