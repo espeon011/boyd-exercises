@@ -2,6 +2,12 @@
 
 #set text(lang: "ja")
 
+#let site-title = link(<home>, {
+  html.span(
+    class: "block p-4 text-xl font-bold text-center dark:text-white no-underline",
+  )[Convex Optimization\ 演習問題解答]
+})
+
 #book(
   debug: false,
   title: "Convex Optimization 演習問題解答",
@@ -9,11 +15,7 @@
   base-url: "https://espeon011.github.io/boyd-exercises",
   html-renderer: new-hamber.html-renderer.with(
     pagefind-enabled: true,
-    sidebar-image: html.a(
-      href: "/",
-      class: "block p-4 text-xl font-bold text-center dark:text-white no-underline",
-      "Convex Optimization\n演習問題解答",
-    ),
+    sidebar-image: site-title,
     summary-image-renderer: new-hamber.summary-image-renderer.with(
       "Convex Optimization Ex",
       bottom-content: [
