@@ -23,6 +23,7 @@
           ];
           text = ''
             cd "$(git rev-parse --show-toplevel)"
+            mkdir -p docs
             find docs -mindepth 1 -delete
             typst compile --features bundle,html --format bundle src/main.typ ./docs --root ./
             pagefind --site ./docs
@@ -36,6 +37,7 @@
           ];
           text = ''
             cd "$(git rev-parse --show-toplevel)"
+            mkdir -p docs
             find docs -mindepth 1 -delete
             typst watch --features bundle,html --format bundle src/main.typ ./docs --root ./
           '';
