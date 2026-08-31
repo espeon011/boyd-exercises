@@ -23,9 +23,9 @@
           ];
           text = ''
             cd "$(git rev-parse --show-toplevel)"
-            rm -rf docs/boyd-exercises
+            find docs -mindepth 1 -delete
             typst compile --features bundle,html --format bundle src/main.typ ./docs --root ./
-            pagefind --site ./docs --output-subdir boyd-exercises/pagefind
+            pagefind --site ./docs
           '';
         };
         watch = pkgs.writeShellApplication {
@@ -36,7 +36,7 @@
           ];
           text = ''
             cd "$(git rev-parse --show-toplevel)"
-            rm -rf docs/boyd-exercises
+            find docs -mindepth 1 -delete
             typst watch --features bundle,html --format bundle src/main.typ ./docs --root ./
           '';
         };
