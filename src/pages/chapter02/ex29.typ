@@ -1,4 +1,6 @@
 #import "../../lib.typ": alpha-enum, cetz, ex
+#import "../../compat.typ": rich-heading
+#show: rich-heading
 
 // 頂点 origin, 角度 start 〜 stop の 2 次元凸錐を扇形として描く
 #let cone(start, stop, r: 3.0, origin: (0, 0), paint: blue, samples: 48) = {
