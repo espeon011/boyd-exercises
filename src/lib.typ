@@ -52,7 +52,7 @@
       html.elem("div", quote-mark() + body)
       html.elem(
         "footer",
-        attrs: (style: "margin-top: 0.6em; font-size: 0.82em; opacity: 0.7;"),
+        attrs: (style: "margin-top: 0.6em; font-size: 0.82em; opacity: 0.7; text-align: right;"),
         {
           "— Boyd and Vandenberghe, "
           html.elem("cite", attrs: (style: "font-style: normal;"), "Convex Optimization")
@@ -66,9 +66,12 @@
     inset: (left: 0.9em, top: 0.2em, bottom: 0.2em),
     stroke: (left: 2pt + rgb("#f97316")),
     {
-      text(fill: luma(45%), lang: "en")[#text(fill: rgb("#f97316"), size: 2.2em, weight: "bold")[“]#body]
-      linebreak()
-      text(size: 0.82em, fill: luma(55%), lang: "en")[— Boyd and Vandenberghe, _Convex Optimization_]
+      text(lang: "en")[#text(fill: rgb("#f97316"), size: 1.3em, weight: "bold")[“]#body]
+      // linebreak()
+      // text(size: 0.82em, fill: luma(55%), lang: "en")[— Boyd and Vandenberghe, _Convex Optimization_]
+      block(below: 0em, width: 100%, align(right, text(size: 0.82em, fill: luma(55%), lang: "en")[
+        — Boyd and Vandenberghe, _Convex Optimization_
+      ]))
     },
   )
 }
@@ -116,7 +119,7 @@
         height: 0.5em,
         radius: 0.25em,
         fill: luma(85%),
-        align(left, rect(width: ratio * 100%, height: 100%, radius: 0.25em, fill: rgb("#f97316"))),
+        align(left, rect(width: ratio * 100%, height: 100%, radius: 0.25em, fill: rgb("#16a34a"))),
       ),
       text(fill: luma(45%), count),
     )

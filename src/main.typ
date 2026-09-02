@@ -11,6 +11,7 @@
 #book(
   debug: false,
   title: "Convex Optimization 演習問題解答",
+  authors: ("psiana011",),
   lang: "ja",
   base-url: "https://espeon011.github.io/boyd-exercises",
   html-renderer: new-hamber.html-renderer.with(
@@ -24,6 +25,17 @@
     ),
     extra-css: read("/assets/li-math-fix.css") + read("/assets/math.css"),
   ),
+  paged-renderer: (tree, title: "", ..args) => {
+    show text: it => {
+      set text(font: ("New Computer Modern", "Harano Aji Mincho"))
+      it
+    }
+    new-hamber.paged-renderer(
+      tree,
+      title: "Convex Optimization\n演習問題解答",
+      ..args,
+    )
+  },
   tree: (
     chapter("index", content: include "pages/home.typ"),
     std.divider(),

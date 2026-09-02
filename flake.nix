@@ -14,6 +14,8 @@
     flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = import nixpkgs {inherit system;};
+        haranoaji = pkgs.callPackage ./haranoaji.nix {};
+        fontPath = "${haranoaji}/share/fonts/opentype/haranoaji";
         compile = pkgs.writeShellApplication {
           name = "compile";
           runtimeInputs = [
@@ -21,12 +23,16 @@
             pkgs.pagefind
             pkgs.git
           ];
+          runtimeEnv = {
+            TYPST_FONT_PATHS = fontPath;
+          };
           text = ''
             cd "$(git rev-parse --show-toplevel)"
             mkdir -p docs
             find docs -mindepth 1 -delete
             typst compile --features bundle,html --format bundle src/main.typ ./docs --root ./
             pagefind --site ./docs
+            env -u SOURCE_DATE_EPOCH typst compile --features bundle,html --format pdf src/main.typ ./docs/cvxex-myans.pdf --root ./
           '';
         };
         watch = pkgs.writeShellApplication {
@@ -35,6 +41,9 @@
             pkgs.typst
             pkgs.git
           ];
+          runtimeEnv = {
+            TYPST_FONT_PATHS = fontPath;
+          };
           text = ''
             cd "$(git rev-parse --show-toplevel)"
             mkdir -p docs
@@ -58,6 +67,7 @@
             pkgs.typst
             pkgs.tinymist
           ];
+          TYPST_FONT_PATHS = fontPath;
         };
       }
     );
