@@ -3,6 +3,7 @@
 = Definition of convexity
 
 #include "chapter03/ex01.typ"
+#include "chapter03/ex02.typ"
 
 WIP
 
