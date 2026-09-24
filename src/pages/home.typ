@@ -8,7 +8,11 @@
 ソースコードは https://github.com/espeon011/boyd-exercises にあります.
 Typst パッケージの #link("https://typst.app/universe/package/haita")[Haita] を用いています.
 
-#context if target() == "html" [#link("./cvxex-myans.pdf")[PDF 版]もあります. ]
+#context if target() == "html" {
+  [#link("./cvxex-myans.pdf")[PDF 版]もあります. ]
+} else {
+  [#link("https://espeon011.github.io/boyd-exercises/")[Web 版]もあります. ]
+}
 
 = 進捗状況
 
