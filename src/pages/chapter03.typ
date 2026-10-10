@@ -7,6 +7,7 @@
 #include "chapter03/ex03.typ"
 #include "chapter03/ex04.typ"
 #include "chapter03/ex05.typ"
+#include "chapter03/ex06.typ"
 
 WIP
 
