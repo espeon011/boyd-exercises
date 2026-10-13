@@ -47,6 +47,6 @@
     std.divider(),
     [= Part III Algorithms],
     std.divider(),
-    chapter("references", content: include "bibliography.typ"),
+    chapter("references", content: include "pages/reference.typ"),
   ),
 )
