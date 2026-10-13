@@ -1,0 +1,27 @@
+boyd2004:
+  type: book
+  title: Convex Optimization
+  author:
+    - Boyd, Stephen
+    - Vandenberghe, Lieven
+  date: 2004
+  publisher:
+    name: Cambridge University Press
+    location: Cambridge
+  url: https://web.stanford.edu/~boyd/cvxbook/
+  serial-number:
+    isbn: "9780521833783"
+
+# penot2007:
+#   type: article
+#   title: Glimpses upon quasiconvex analysis
+#   author: Penot, Jean-Paul
+#   date: 2007
+#   page-range: 170-194
+#   url: https://doi.org/10.1051/proc:072016
+#   serial-number:
+#     doi: "10.1051/proc:072016"
+#   parent:
+#     type: periodical
+#     title: "ESAIM: Proc."
+#     volume: 20
