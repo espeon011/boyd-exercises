@@ -1,4 +1,6 @@
-#title[Chapter 3: Convex functions]
+#set cite(style: "alphanumeric")
+
+#title[Chapter 3: Convex functions] #cite(<BV04>, form: none)
 
 = Definition of convexity
 
@@ -37,3 +39,7 @@ WIP
 = Convexity with respect to a generalized inequality
 
 WIP
+
+#text(lang: "en")[
+  #bibliography("../refs.yaml")
+]

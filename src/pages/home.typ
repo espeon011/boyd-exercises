@@ -1,9 +1,10 @@
 #import "../lib.typ": progress-row
+#set cite(style: "alphanumeric")
 
-#title[Home] <home>
+#title[About] <home>
 
-ここは #link("https://web.stanford.edu/~boyd/cvxbook/")[Stephen Boyd and Lieven Vandenberghe. Convex Optimization] の演習問題を解いた結果を置いておく場所です.
-作成者が個人的に作成した解答であり, 公式とは無関係です.
+ここは #cite(<BV04>, form: "prose") の演習問題を解いた結果を置いておく場所です.
+本解答は個人が作成したものであり, 原著および著者らとは無関係です.
 
 ソースコードは https://github.com/espeon011/boyd-exercises にあります.
 Typst パッケージの #link("https://typst.app/universe/package/haita")[Haita] を用いています.
@@ -14,7 +15,7 @@ Typst パッケージの #link("https://typst.app/universe/package/haita")[Haita
   [#link("https://espeon011.github.io/boyd-exercises/")[Web 版]もあります. ]
 }
 
-= 進捗状況
+= Progress
 
 *Part I Theory*
 
@@ -34,3 +35,7 @@ Typst パッケージの #link("https://typst.app/universe/package/haita")[Haita
 #progress-row("Chapter 9: Unconstrained minimization", 0, 32)
 #progress-row("Chapter 10: Equality constrained minimization", 0, 16)
 #progress-row("Chapter 11: Interior-point methods", 0, 24)
+
+#text(lang: "en")[
+  #bibliography("../refs.yaml")
+]

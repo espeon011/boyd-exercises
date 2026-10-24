@@ -3,7 +3,7 @@
 == Exercise 3.4
 
 #ex[
-  [RV73, page 15]
+  @RV73[page 15]
   Show that a continuous function $f: RR^n -> RR$ is convex if and only if for every line segment,
   its average value on the segment is less than or equal to the average of its values at the endpoints of the segment:
   For every $x, y in RR^n$,

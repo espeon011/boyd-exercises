@@ -5,7 +5,7 @@
 == Exercise 3.5 (Running average of a convex function)
 
 #ex[
-  [RV73, page 22]
+  @RV73[page 22]
   Suppose $f: RR -> RR$ is convex, with $RR_+ subset.eq dom f$.
   Show that its running average $F$, defined as
   $

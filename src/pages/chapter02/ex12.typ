@@ -36,7 +36,8 @@
       $ dist(x, S) = inf { norm(x - z)_2 mid(|) z in S }. $
     ],
     [
-      \[HUL93, volume 1, page 93\] The set ${ x mid(|) x + S_2 subset.eq S_1 }$,
+      @HUL93[volume 1, page 93]
+      The set ${ x mid(|) x + S_2 subset.eq S_1 }$,
       where $S_1, S_2 subset.eq RR^n$ with $S_1$ convex.
     ],
     [

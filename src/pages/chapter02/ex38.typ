@@ -3,7 +3,7 @@
 == Exercise 2.38 (Convex cones constructed from sets)
 
 #ex[
-  \[Roc70, pages 15, 61\]
+  @Roc70[pages 15, 61]
   #alpha-enum(
     [
       The _barrier cone_ of a set $C$ is defined as the set of all vectors $y$ such that

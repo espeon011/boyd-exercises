@@ -1,4 +1,4 @@
-#import "@preview/cetz:0.5.2"
+#import "@preview/cetz:0.5.3"
 
 // (a), (b), (c), ... で番号づけする enum 関数
 #let alpha-enum(..items, start: 1) = context {

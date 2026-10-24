@@ -1,0 +1,58 @@
+BV04:
+  type: book
+  title: Convex Optimization
+  author:
+    - Boyd, Stephen
+    - Vandenberghe, Lieven
+  date: 2004
+  publisher:
+    name: Cambridge University Press
+    location: Cambridge
+  url:
+    value: https://web.stanford.edu/~boyd/cvxbook/
+    date: 2026-10-25
+  serial-number:
+    isbn: "9780521833783"
+
+HUL93:
+  type: book
+  title: Convex Analysis and Minimization Algorithms
+  author:
+    - Hiriart-Urruty, J.-B.
+    - Lemaréchal, C.
+  date: 1993
+  publisher: Springer
+  volume-total: 2
+
+Roc70:
+  type: book
+  title: Convex Analysis
+  author: Rockafellar, R. T.
+  date: 1970
+  publisher: Princeton University Press
+
+MY13:
+  type: web
+  title: 非負半正定値錐上の最適化問題とその周辺
+  author:
+    # - Matsukawa, Y
+    # - Yoshise, A
+    - 松川, 恭明
+    - 吉瀬, 章子
+  date: 2013-02-19
+  url:
+    value: https://imi.kyushu-u.ac.jp/~waki/ws2013/slide/matsukawa.pdf
+    date: 2026-10-25
+  parent:
+    type: web
+    title: "最適化ワークショップ: 拡がっていく最適化"
+    url: https://imi.kyushu-u.ac.jp/~waki/ws2013/index.html
+
+RV73:
+  type: book
+  title: Convex Functions
+  author:
+    - Roberts, A. W.
+    - Varberg, D. E.
+  date: 1973
+  publisher: Academic Press

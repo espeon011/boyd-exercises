@@ -1,4 +1,6 @@
-#title[Chapter 2: Convex sets]
+#set cite(style: "alphanumeric")
+
+#title[Chapter 2: Convex sets] #cite(<BV04>, form: none)
 
 = Definition of convexity
 
@@ -53,3 +55,7 @@
 #include "chapter02/ex37.typ"
 #include "chapter02/ex38.typ"
 #include "chapter02/ex39.typ"
+
+#text(lang: "en")[
+  #bibliography("../refs.yaml")
+]
