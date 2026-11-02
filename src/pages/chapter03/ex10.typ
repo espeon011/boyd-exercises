@@ -44,11 +44,11 @@
   よって $EE f(v) < EE f(w)$ であり, 最初に確認した $var (v) > var(w)$ と合わせて予想の反例とする (ここで $x_0 = 0$ とした).
 ][
   $v$ を平均が $0$ である確率変数とし, $EE f(x_0 + t v)$ を $g(t)$ と書くことにすると $f(x_0 + t y)$ が $y$ について凸であることから §3.2.1 より $g(t)$ は凸関数である.
-  また, §3.1.8 より
+  また, $EE v = 0$ と §3.1.8 より
   $ g(0) = EE f(x_0) = f(x_0) = f (EE [x_0 + t v]) <= EE f(x_0 + t v) = g(t) $
   となり, $t = 0$ のとき $g$ は最小値を取る.
   $0 <= s < t$ とする.
-  このとき $s = (frac((t - s), t, style: "horizontal")) 0 + (frac(s, t, style: "horizontal")) t$ であることと $EE v = 0$ から
+  このとき $s = (frac((t - s), t, style: "horizontal")) 0 + (frac(s, t, style: "horizontal")) t$ であること から
   $ g(s) = g((t-s)/t dot.c 0 + s/t dot.c t) <= (t-s)/t g(0) + s/t g(t) <= (t-s)/t g(t) + s/t g(t) = g(t) $
   を得る. 従って $g(t) = EE f(x_0 + t v)$ は $t$ について単調増加である. $qed$
 ]
