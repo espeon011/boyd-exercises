@@ -3,7 +3,7 @@
 #let int = math.op("int")
 #let cl = math.op("cl")
 
-== Exercise 2.39 (Separation of cones)
+== Exercise 2.39 (Separation of cones) <ex-2-39>
 
 #ex[
   Let $K$ and $tilde(K)$ be two convex cones whose interiors are nonempty and disjoint.
