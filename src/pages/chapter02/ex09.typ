@@ -84,9 +84,9 @@
   [
     一般には成り立たない. $RR^2$ 内で反例を示す. 以下のように置く.
     $
-      P_1 = {mat(x; y) in RR^2 mid(|) y >= 0}
-      , quad P_2 = {mat(x; y) in RR^2 mid(|) x <= 0, y <= 0}
-      , quad P_3 = {mat(x; y) in RR^2 mid(|) x >= 0, y <= 0}
+      P_1 & = {mat(x; y) in RR^2 mid(|) y >= 0} \
+      P_2 & = {mat(x; y) in RR^2 mid(|) x <= 0, y <= 0} \
+      P_3 & = {mat(x; y) in RR^2 mid(|) x >= 0, y <= 0}
     $
 
     #let non-voronoi = cetz.canvas(length: 1cm, {

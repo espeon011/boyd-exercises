@@ -1,3 +1,5 @@
+#import "../compat.typ": rich-heading
+#show: rich-heading
 #set cite(style: "alphanumeric")
 
 #title[Chapter 2: Convex sets] #cite(<BV04>, form: none)
@@ -57,5 +59,6 @@
 #include "chapter02/ex39.typ"
 
 #text(lang: "en")[
-  #bibliography("../refs.yaml")
+  #heading(numbering: none)[Bibliography] <ch2-bibliography>
+  #bibliography("../refs.yaml", title: none)
 ]

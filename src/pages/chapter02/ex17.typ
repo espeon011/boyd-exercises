@@ -42,7 +42,6 @@
     このとき
     $
       P(sum_(i=1)^K theta_i (v_i, t_i))
-      = P(sum_(i=1)^K theta_i v_i, sum_(i=1)^K theta_i t_i)
       = (sum_(i=1)^K theta_i v_i) / (sum_(i=1)^K theta_i t_i)
       = sum_(i=1)^K (theta_i t_i ) / (sum_(j=1)^K theta_j t_j) v_i / t_i.
     $
@@ -70,7 +69,8 @@
       このとき $(t w, t) in C$ かつ $P(t w, t) = w$ である.
       従って
       $
-        P(C) = {w in RR^n mid(|) f^T w + g "and" h "have the same sign"} = {w in RR^n mid(|) h (f^T w + g) > 0}.
+        P(C) & = {w in RR^n mid(|) f^T w + g "and" h "have the same sign"} \
+             & = {w in RR^n mid(|) h (f^T w + g) > 0}.
       $
   ],
   [

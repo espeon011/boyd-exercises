@@ -10,12 +10,12 @@
 ]
 
 *解答*:
-$theta in [0, 1]$ とし, $v, w in RR^(m + n)$ を次のように定める.
+$v, w in S$ を取ると $v$, $w$ は次のように書ける:
 $
-  v & := (x^((1)), y_1^((1)) + y_2^((1))) in S quad (x^((1)) in RR^m, thick y_1^((1)), y_2^((1)) in RR^n, thick (x^((1)), y_1^((1))) in S_1, thick (x^((1)), y_2^((1))) in S_2) \
-  w & := (x^((2)), y_1^((2)) + y_2^((2))) in S quad (x^((2)) in RR^m, thick y_1^((2)), y_2^((2)) in RR^n, thick (x^((2)), y_1^((2))) in S_1, thick (x^((2)), y_2^((2))) in S_2)
+  v = (x^((1)), y_1^((1)) + y_2^((1))), quad w = (x^((2)), y_1^((2)) + y_2^((2)))
 $
-このとき
+ここで $x^((i)) in RR^m$, $y_1^((i)), y_2^((i)) in RR^n$ であり,
+$(x^((i)), y_1^((i))) in S_1$ かつ $(x^((i)), y_2^((i))) in S_2$ である.
 $
   theta v + (1 - theta) w = (theta x^((1)) + (1 - theta) x^((2)), theta y_1^((1)) + (1 - theta) y_1^((2)) + theta y_2^((1)) + (1 - theta) y_2^((2)))
 $

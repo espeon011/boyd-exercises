@@ -1,6 +1,4 @@
 #import "../../lib.typ": ex
-#import "../../compat.typ": rich-heading
-#show: rich-heading
 
 == Exercise 2.28 (Positive semidefinite cone for $n = 1, 2, 3$)
 

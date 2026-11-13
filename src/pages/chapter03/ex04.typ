@@ -32,7 +32,7 @@ $
   theta_2 & = inf { theta in [theta_0, 1] mid(|) f(theta x + (1 - theta) y) <= theta f(x) + (1 - theta) f(y)}
 $
 が定義でき, $theta_0 in (theta_1, theta_2)$ であり,
-$theta in (theta_1, theta_2) => f(theta x + (1 - theta) y) > theta f(x) + (1 - theta) f(y)$ が成り立つ.
+$theta in (theta_1, theta_2)$ ならば $f(theta x + (1 - theta) y) > theta f(x) + (1 - theta) f(y)$ が成り立つ.
 更に
 $
   f(theta_1 x + (1 - theta_1) y) & = theta_1 f(x) + (1 - theta_1) f(y) \

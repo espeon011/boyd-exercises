@@ -29,7 +29,7 @@
     frac(1, (2 sqrt(6)), style: "horizontal") thick & "if" abs(x) <= sqrt(6),
     0 thick & "other"
   ). $
-  両方とも密度関数が偶関数であることから平均は 0 であり, 分散は v の方が大きい:
+  両方とも密度関数が偶関数であることから平均は 0 であり, 分散は $v$ の方が大きい:
   $ EE v = EE w = 0 \
   var(v) = 7/3, quad var(w) = 2. $
   関数 $f$ を $f(x) = x^4$ と定めると $f$ は凸関数である.

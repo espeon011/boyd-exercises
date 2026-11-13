@@ -68,7 +68,7 @@
       A = mat(-1, 0; 0, -1), quad b = 0, quad c = 0, quad g = mat(0; 1), quad h = 0
     $
     とおくと $C = RR^2$ である, $L$ は $x_1$ 軸に等しい.
-    従って $C inter L = L = {x in R^2 mid(|) x_2 = 0}$ であり凸である.
+    従って $C inter L = L = {x in RR^2 mid(|) x_2 = 0}$ であり凸である.
     一方で任意の $lambda in RR$ に対して
     $
       A + lambda g g^T = mat(-1, 0; 0, lambda - 1)

@@ -1,3 +1,5 @@
+#import "../compat.typ": rich-heading
+#show: rich-heading
 #set cite(style: "alphanumeric")
 
 #title[Chapter 3: Convex functions] #cite(<BV04>, form: none)
@@ -45,5 +47,6 @@ WIP
 WIP
 
 #text(lang: "en")[
-  #bibliography("../refs.yaml")
+  #heading(numbering: none)[Bibliography] <ch3-bibliography>
+  #bibliography("../refs.yaml", title: none)
 ]

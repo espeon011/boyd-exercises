@@ -37,5 +37,6 @@ Typst パッケージの #link("https://typst.app/universe/package/haita")[Haita
 #progress-row("Chapter 11: Interior-point methods", 0, 24)
 
 #text(lang: "en")[
-  #bibliography("../refs.yaml")
+  #heading(numbering: none)[Bibliography] <home-bibliography>
+  #bibliography("../refs.yaml", title: none)
 ]
